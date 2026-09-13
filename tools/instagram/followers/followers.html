@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Followers - Instagram</title>
+    <title>Followers e Following - Instagram</title>
     <link rel="stylesheet" href="followers.css">
 </head>
 <body>
@@ -13,10 +13,8 @@
         </button>
 
         <header>
-            <h1>Followers</h1>
-            <p>
-                Consultar seguidores de um perfil
-            </p>
+            <h1>Followers e Following</h1>
+            <p>Coletar seguidores e perfis seguidos de um perfil do Instagram.</p>
         </header>
 
         <section class="step">
@@ -24,20 +22,13 @@
                 <span class="step-number">1</span>
 
                 <div>
-                    <strong>
-                        Identificar perfil
-                    </strong>
-
-                    <p>
-                        Informe a URL do perfil para localizar o User ID.
-                    </p>
+                    <strong>Identificar perfil</strong>
+                    <p>Informe a URL do perfil para localizar o User ID.</p>
                 </div>
             </div>
 
             <div class="field">
-                <label for="profileUrl">
-                    URL do perfil
-                </label>
+                <label for="profileUrl">URL do perfil</label>
 
                 <input
                     id="profileUrl"
@@ -51,122 +42,104 @@
             </button>
 
             <div class="field">
-                <label for="username">
-                    Username
-                </label>
-
-                <input
-                    id="username"
-                    type="text"
-                    readonly
-                >
+                <label for="username">Username</label>
+                <input id="username" type="text" readonly>
             </div>
 
             <div class="field">
-                <label for="userId">
-                    User ID
-                </label>
-
-                <input
-                    id="userId"
-                    type="text"
-                    readonly
-                >
+                <label for="userId">User ID</label>
+                <input id="userId" type="text" readonly>
             </div>
         </section>
 
-        <section id="requestStep" class="step disabled-step">
+        <section class="step">
             <div class="step-header">
                 <span class="step-number">2</span>
 
                 <div>
-                    <strong>
-                        Consultar followers
-                    </strong>
+                    <strong>Coletar dados</strong>
+                    <p>Followers e Following serão coletados automaticamente.</p>
+                </div>
+            </div>
 
-                    <p>
-                        A requisição será montada automaticamente.
-                    </p>
+            <div class="actions">
+                <button id="collectButton" class="primary-button" type="button" disabled>
+                    Iniciar coleta
+                </button>
+
+                <button id="stopButton" class="secondary-button" type="button" disabled>
+                    Parar coleta
+                </button>
+            </div>
+        </section>
+
+        <section class="step">
+            <div class="step-header">
+                <span class="step-number">3</span>
+
+                <div>
+                    <strong>Acompanhamento</strong>
+                    <p>Acompanhe o andamento da coleta.</p>
+                </div>
+            </div>
+
+            <div class="summary">
+                <div class="summary-item">
+                    <span>Followers</span>
+                    <strong id="followersCount">0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Following</span>
+                    <strong id="followingCount">0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Páginas</span>
+                    <strong id="pagesCount">0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Imagens</span>
+                    <strong id="imagesCount">0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Falhas de imagem</span>
+                    <strong id="imagesFailedCount">0</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Próximo cursor</span>
+                    <strong id="nextCursor">-</strong>
                 </div>
             </div>
 
             <div class="field">
-                <label for="apiUrl">
-                    URL da API
-                </label>
+                <label>Status</label>
+                <div id="status" class="collection-status">
+                    Aguardando
+                </div>
+            </div>
+        </section>
 
-                <textarea
-                    id="apiUrl"
-                    class="request-url"
-                    readonly
-                ></textarea>
+        <section id="exportSection" class="step hidden">
+            <div class="step-header">
+                <span class="step-number">4</span>
+
+                <div>
+                    <strong>Exportar dados</strong>
+                    <p>Gere o pacote ZIP com Followers, Following, imagens e visualizadores HTML.</p>
+                </div>
             </div>
 
-            <div class="field">
-                <label for="headers">
-                    Headers
-                </label>
-
-                <textarea
-                    id="headers"
-                    readonly
-                ></textarea>
-            </div>
-
-            <button id="executeButton" class="primary-button" type="button" disabled>
-                Buscar followers
+            <button id="exportButton" class="primary-button" type="button">
+                Gerar pacote ZIP
             </button>
-        </section>
-
-        <section id="requestStatus" class="status-card hidden">
-            <span id="statusDot" class="status-dot"></span>
-
-            <div>
-                <strong id="statusTitle">
-                    Status
-                </strong>
-
-                <p id="statusMessage"></p>
-            </div>
-        </section>
-
-        <section id="summary" class="summary hidden">
-            <div class="summary-item">
-                <span>Status HTTP</span>
-                <strong id="httpStatus">-</strong>
-            </div>
-
-            <div class="summary-item">
-                <span>Usuários</span>
-                <strong id="usersCount">0</strong>
-            </div>
-
-            <div class="summary-item">
-                <span>Has more</span>
-                <strong id="hasMore">-</strong>
-            </div>
-
-            <div class="summary-item">
-                <span>Next max ID</span>
-                <strong id="nextMaxId">-</strong>
-            </div>
-        </section>
-
-        <section id="usersSection" class="users-section hidden">
-            <h2>Seguidores</h2>
-
-            <div id="usersList" class="users-list"></div>
-        </section>
-
-        <section id="rawSection" class="raw-section hidden">
-            <button id="toggleRawButton" class="secondary-button" type="button">
-                Ver resposta JSON
-            </button>
-
-            <pre id="rawResponse" class="raw-response hidden"></pre>
         </section>
     </main>
 
+    <script src="../../../shared/jszip.min.js"></script>
     <script src="followers.js"></script>
 </body>
 </html>
