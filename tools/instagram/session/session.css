@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    width: 420px;
+    min-height: 520px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #0f1115;
+    color: #ffffff;
+}
+
+.container {
+    padding: 24px;
+}
+
+.back-button {
+    border: none;
+    padding: 0;
+    margin-bottom: 28px;
+
+    background: transparent;
+    color: #8b949e;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #ffffff;
+}
+
+header {
+    margin-bottom: 26px;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+header p {
+    margin: 6px 0 0;
+
+    font-size: 14px;
+    color: #8b949e;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    margin-bottom: 26px;
+
+    border: 1px solid #30363d;
+    border-radius: 12px;
+
+    background: #161b22;
+}
+
+.status-dot {
+    flex-shrink: 0;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #8b949e;
+}
+
+.status-dot.success {
+    background: #3fb950;
+}
+
+.status-dot.error {
+    background: #f85149;
+}
+
+.status-card strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.status-card p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+    color: #8b949e;
+}
+
+.session {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.field label {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #c9d1d9;
+}
+
+.field-row {
+    display: flex;
+    align-items: stretch;
+
+    gap: 8px;
+}
+
+input,
+textarea {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    border: 1px solid #30363d;
+    border-radius: 8px;
+
+    background: #0d1117;
+    color: #e6edf3;
+
+    outline: none;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+}
+
+input {
+    height: 42px;
+
+    padding: 0 12px;
+
+    flex: 1;
+}
+
+textarea {
+    min-height: 110px;
+
+    padding: 12px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #58a6ff;
+}
+
+.copy-button {
+    flex-shrink: 0;
+
+    min-width: 72px;
+
+    padding: 0 14px;
+
+    border: 1px solid #30363d;
+    border-radius: 8px;
+
+    background: #21262d;
+    color: #ffffff;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #30363d;
+}
+
+.primary-button {
+    width: 100%;
+
+    padding: 11px 14px;
+
+    border: 1px solid #30363d;
+    border-radius: 8px;
+
+    background: #21262d;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #30363d;
+}
+
+.auth-json-button {
+    margin-top: 8px;
+}
+

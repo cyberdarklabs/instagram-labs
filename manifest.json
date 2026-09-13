@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Developer Toolbox",
+  "version": "0.1.0",
+  "description": "Conjunto de ferramentas para capturar informações de suas redes sociais para uso em softwares terceiros",
+
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://instagram.com/*",
+    "https://www.instagram.com/*",
+    "https://*.instagram.com/*",
+    "https://*.fbcdn.net/*"
+],
+
+  "action": {
+    "default_title": "Dark Developer Toolbox",
+    "default_popup": "popup/popup.html"
+  }
+}

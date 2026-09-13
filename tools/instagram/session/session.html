@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Instagram - Douglas DevTools
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="session.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- VOLTAR -->
+
+        <button
+            id="backButton"
+            class="back-button"
+            type="button"
+        >
+            ‹ Voltar
+        </button>
+
+
+        <!-- CABEÇALHO -->
+
+        <header>
+
+            <h1>
+                Instagram
+            </h1>
+
+            <p>
+                Sessão e autenticação
+            </p>
+
+        </header>
+
+
+        <!-- STATUS -->
+
+        <section class="status-card">
+
+            <span
+                id="statusDot"
+                class="status-dot"
+            ></span>
+
+            <div>
+
+                <strong>
+                    Instagram
+                </strong>
+
+                <p id="status">
+                    Lendo sessão...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS DA SESSÃO -->
+
+        <section class="session">
+
+
+            <!-- USER ID -->
+
+            <div class="field">
+
+                <label for="userId">
+                    ds_user_id
+                </label>
+
+                <div class="field-row">
+
+                    <input
+                        id="userId"
+                        type="text"
+                        readonly
+                    >
+
+                    <button
+                        class="copy-button"
+                        data-copy="userId"
+                        type="button"
+                    >
+                        Copiar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CSRF TOKEN -->
+
+            <div class="field">
+
+                <label for="csrfToken">
+                    CSRF Token
+                </label>
+
+                <div class="field-row">
+
+                    <input
+                        id="csrfToken"
+                        type="password"
+                        readonly
+                    >
+
+                    <button
+                        class="copy-button"
+                        data-copy="csrfToken"
+                        type="button"
+                    >
+                        Copiar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SESSION ID -->
+
+            <div class="field">
+
+                <label for="sessionId">
+                    Session ID
+                </label>
+
+                <div class="field-row">
+
+                    <input
+                        id="sessionId"
+                        type="password"
+                        readonly
+                    >
+
+                    <button
+                        class="copy-button"
+                        data-copy="sessionId"
+                        type="button"
+                    >
+                        Copiar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COOKIE COMPLETO -->
+
+            <div class="field">
+
+                <label for="cookie">
+                    Cookie completo
+                </label>
+
+                <textarea
+                    id="cookie"
+                    readonly
+                ></textarea>
+
+                <button id="copyCookie" class="primary-button" type="button">
+                    Copiar Cookie completo
+                </button>
+
+                <button id="copyAuthJson" class="primary-button auth-json-button" type="button">
+                    Copiar autenticação JSON
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="session.js"></script>
+
+</body>
+
+</html>

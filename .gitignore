@@ -1,0 +1,73 @@
+# ==============================
+# SSH Keys
+# ==============================
+
+**/id_ed25519_dark_toolbox
+**/id_ed25519_dark_toolbox.pub
+
+# ==============================
+# macOS
+# ==============================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+._*
+
+.Spotlight-V100
+.Trashes
+
+# ==============================
+# Windows
+# ==============================
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+Desktop.ini
+
+$RECYCLE.BIN/
+
+*.lnk
+
+# ==============================
+# Visual Studio Code
+# ==============================
+
+.vscode/
+
+*.code-workspace
+
+# ==============================
+# IntelliJ IDEA / JetBrains
+# ==============================
+
+.idea/
+
+*.iml
+*.ipr
+*.iws
+
+out/
+
+# ==============================
+# Logs
+# ==============================
+
+*.log
+
+logs/
+
+# ==============================
+# Temporary files
+# ==============================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+*~
